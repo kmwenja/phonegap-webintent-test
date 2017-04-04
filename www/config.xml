@@ -22,5 +22,5 @@
 
     <platform name="android"></platform>
 
-    <plugin name="cordova-plugin-intent" src="npm"/>
+    <plugin spec="https://github.com/napolitano/cordova-plugin-intent.git"/>
 </widget>
