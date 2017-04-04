@@ -11,19 +11,22 @@
     <script type="text/javascript" src="cordova.js"></script>
     <script type="text/javascript" src="webintent.js"></script>
     <script type="text/javascript">
+        var intents = [];
         function start() {
             var content = document.getElementById("content");
             if(window.plugins !== undefined && window.plugins.intent !== undefined) {
                 content.innerHTML = "Has plugin!";
 
                 window.plugins.intent.getCordovaIntent(function(intent){
-                    content.innerHTML = JSON.stringify(intent);
+                    intents.push(intent);
+                    content.innerHTML = JSON.stringify(intents);
                 }, function() {
                     content.innerHTML = "Could not retrieve intent";
                 });
 
                 window.plugins.intent.setNewIntentHandler(function(intent){
-                    content.innerHTML = JSON.stringify(intent);
+                    intents.push(intent);
+                    content.innerHTML = JSON.stringify(intents);
                 });
             } else {
                 content.innerHTML = "No plugin!";
