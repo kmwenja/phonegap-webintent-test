@@ -11,14 +11,16 @@
     <script type="text/javascript" src="cordova.js"></script>
     <script type="text/javascript" src="webintent.js"></script>
     <script type="text/javascript">
-        document.addEventListener('deviceready', function(){
+        function start() {
             var content = document.getElementById("content");
-            if(windows.plugins.intent !== undefined) {
+            if(window.plugins !== undefined && window.plugins.intent !== undefined) {
                 content.innerHTML = "Has plugin!";
             } else {
                 content.innerHTML = "No plugin!";
             }
-        });
+        }
+        document.addEventListener('deviceready', start);
+        document.addEventListener('DOMContentLoaded', start);
     </script>
 </body>
 </html>
