@@ -24,12 +24,7 @@
     <platform name="android"></platform>
 
     <config-file platform="android" parent="/manifest" mode="merge">
-        <activity android:configChanges="orientation|keyboardHidden|keyboard|screenSize|locale"
-          android:label="@string/activity_name"
-          android:launchMode="singleTask"
-          android:name="MainActivity"
-          android:theme="@android:style/Theme.Holo.Light"
-          android:windowSoftInputMode="adjustResize">
+        <activity android:launchMode="singleTask">
 
             <intent-filter android:label="@string/launcher_name">
                 <action android:name="android.intent.action.MAIN" />
