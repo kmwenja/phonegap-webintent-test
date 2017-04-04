@@ -15,12 +15,15 @@
             var content = document.getElementById("content");
             if(window.plugins !== undefined && window.plugins.intent !== undefined) {
                 content.innerHTML = "Has plugin!";
+
+                window.plugins.intent.setNewIntentHandler(function(intent){
+                    content.innerHTML = JSON.stringify(intent);
+                });
             } else {
                 content.innerHTML = "No plugin!";
             }
         }
         document.addEventListener('deviceready', start);
-        document.addEventListener('DOMContentLoaded', start);
     </script>
 </body>
 </html>
