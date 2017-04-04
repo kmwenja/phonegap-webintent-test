@@ -20,6 +20,7 @@
     <preference name="target-device" value="universal"/>
     <preference name="fullscreen" value="true"/>
     <preference name="android-installLocation" value="auto"/>
+    <preference name="android-launchMode" value="singleTask"/>
 
     <platform name="android"></platform>
 
