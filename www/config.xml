@@ -24,21 +24,21 @@
     <platform name="android"></platform>
 
     <config-file platform="android" parent="/manifest" mode="merge">
-        <activity android:launchMode="singleTask">
+        <activity android:name="MainActivity" android:launchMode="singleTask"/>
+    </config-file>
 
-            <intent-filter android:label="@string/launcher_name">
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
+    <config-file platform="android" parent="/manifest/application/activity">
+        <intent-filter android:label="@string/launcher_name">
+            <action android:name="android.intent.action.MAIN" />
+            <category android:name="android.intent.category.LAUNCHER" />
+        </intent-filter>
 
-            <intent-filter>
-                <action android:name="android.intent.action.SEND" />
-                <action android:name="android.intent.action.SEND_MULTIPLE" />
-                <category android:name="android.intent.category.DEFAULT" />
-                <data android:mimeType="*/*" />
-            </intent-filter>
-
-        </activity>
+        <intent-filter>
+            <action android:name="android.intent.action.SEND" />
+            <action android:name="android.intent.action.SEND_MULTIPLE" />
+            <category android:name="android.intent.category.DEFAULT" />
+            <data android:mimeType="*/*" />
+        </intent-filter>
     </config-file>
 
     <plugin spec="https://github.com/kmwenja/cordova-plugin-intent.git"/>
