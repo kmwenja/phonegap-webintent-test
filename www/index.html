@@ -17,6 +17,11 @@
             if(window.plugins !== undefined && window.plugins.intent !== undefined) {
                 content.innerHTML = "Has plugin!";
 
+                window.plugins.intent.setNewIntentHandler(function(intent){
+                    intents.push(intent);
+                    content.innerHTML = JSON.stringify(intents);
+                });
+
                 window.plugins.intent.getCordovaIntent(function(intent){
                     intents.push(intent);
                     content.innerHTML = JSON.stringify(intents);
@@ -24,10 +29,6 @@
                     content.innerHTML = "Could not retrieve intent";
                 });
 
-                window.plugins.intent.setNewIntentHandler(function(intent){
-                    intents.push(intent);
-                    content.innerHTML = JSON.stringify(intents);
-                });
             } else {
                 content.innerHTML = "No plugin!";
             }
