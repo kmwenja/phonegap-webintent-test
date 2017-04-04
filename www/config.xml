@@ -22,5 +22,5 @@
 
     <platform name="android"></platform>
 
-    <plugin spec="https://github.com/napolitano/cordova-plugin-intent.git"/>
+    <plugin spec="https://github.com/kmwenja/cordova-plugin-intent.git"/>
 </widget>
