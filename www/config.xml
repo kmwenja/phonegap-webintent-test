@@ -22,5 +22,5 @@
 
     <platform name="android"></platform>
 
-    <plugin name="WebIntent" value="com.borismus.webintent.WebIntent"/>
+    <plugin name="phonegap-webintent" src="npm"/>
 </widget>
