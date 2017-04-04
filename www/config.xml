@@ -22,5 +22,5 @@
 
     <platform name="android"></platform>
 
-    <plugin name="phonegap-webintent" src="npm"/>
+    <plugin name="cordova-plugin-intent" src="npm"/>
 </widget>
